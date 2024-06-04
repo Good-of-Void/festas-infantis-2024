@@ -10,6 +10,8 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             public string Telefone { get; set; }
 
+            public string CPF { get; set; }
+
             public List<Aluguel> Alugueis { get; set; } = new List<Aluguel>();
 
             public int QuantidadeAlugueis { get { return Alugueis.Where(x => x.PagamentoConcluido).Count(); } }
@@ -19,10 +21,11 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             }
         //construtor
-            public Cliente(string nome, string telefone)
+            public Cliente(string nome, string telefone, string cpf)
             {
                 this.Nome = nome;
                 this.Telefone = telefone;
+                this.CPF = cpf;
             }
         //registrar aluguel no cliente
             public void RegistrarAluguel(Aluguel aluguel)
@@ -42,7 +45,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
                 this.Nome = novo.Nome;
                 this.Telefone = novo.Telefone;
+                this.CPF= novo.CPF;
                 this.Alugueis = novo.Alugueis;
+                
             }
 
             public override string ToString()
@@ -60,7 +65,10 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 if (string.IsNullOrEmpty(Telefone))
                     erros.Add("O campo 'Telefone' é obrigatório");
 
-                return erros;
+                if (string.IsNullOrEmpty(CPF))
+                     erros.Add("O campo 'CPF' é obrigatório");
+
+            return erros;
             }
 
         //calculando desconto para o cliente
