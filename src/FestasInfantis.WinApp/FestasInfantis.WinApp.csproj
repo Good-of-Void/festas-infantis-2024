@@ -23,4 +23,11 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ModuloTema\" />
+    <Folder Include="ModuloItem\" />
+    <Folder Include="ModuloAluguel\" />
+    <Folder Include="ModuloFesta\" />
+  </ItemGroup>
+
 </Project>
