@@ -1,4 +1,4 @@
-﻿using eAgenda.WinApp.Compartilhado;
+﻿using FestasInfantis.WinApp.Compartilhado;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
