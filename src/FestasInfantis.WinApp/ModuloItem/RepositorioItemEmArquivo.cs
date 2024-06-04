@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
-    public class RepositorioTemaEmMemoria : RepositorioBaseEmMemoria<Item> , IRepositorioItem 
+    internal class RepositorioTemaEmArquivo : RepositorioBaseEmArquivo<Item> , IRepositorioItem
     {
+        public RepositorioTemaEmArquivo() : base("Itens.json")
+        {
+
+        }
     }
 }
