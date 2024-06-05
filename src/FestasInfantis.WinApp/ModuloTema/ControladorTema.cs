@@ -11,8 +11,8 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public ControladorTema(IRepositorioTema repositorioTema,IRepositorioItem repositorioItem)
         {
-            repositorioItem = repositorioItem;
-            repositorioTema = repositorioTema;
+            RepositorioItem = repositorioItem;
+            RepositorioTema = repositorioTema;
         }
 
         public override string TipoCadastro { get { return "Tema"; } }
