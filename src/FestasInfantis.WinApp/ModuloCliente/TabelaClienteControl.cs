@@ -10,9 +10,8 @@ namespace FestasInfantis.WinApp.ModuloCliente
             InitializeComponent();
 
             grid.Columns.AddRange(ObterColunas());
-
-            //grid.ConfigurarGridSomenteLeitura();
-            //grid.ConfigurarGridZebrado();
+            grid.ConfigurarGridSomenteLeitura();
+            grid.ConfigurarGridZebrado();
         }
 
         //precisa arrumar 
