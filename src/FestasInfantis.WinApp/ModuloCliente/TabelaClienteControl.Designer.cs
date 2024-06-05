@@ -39,24 +39,27 @@
             grid.AllowUserToResizeColumns = false;
             grid.AllowUserToResizeRows = false;
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.BackgroundColor = Color.FromArgb(63, 114, 175);
             grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grid.Dock = DockStyle.Fill;
             grid.Location = new Point(0, 0);
+            grid.Margin = new Padding(3, 2, 3, 2);
             grid.Name = "grid";
             grid.ReadOnly = true;
             grid.RowHeadersVisible = false;
             grid.RowHeadersWidth = 51;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.Size = new Size(552, 370);
+            grid.Size = new Size(483, 278);
             grid.TabIndex = 0;
             // 
-            // TabelaClienteControl1
+            // TabelaClienteControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(grid);
-            Name = "TabelaClienteControl1";
-            Size = new Size(552, 370);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "TabelaClienteControl";
+            Size = new Size(483, 278);
             ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             ResumeLayout(false);
         }
