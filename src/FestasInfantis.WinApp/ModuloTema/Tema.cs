@@ -1,18 +1,30 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloAluguel;
 using FestasInfantis.WinApp.ModuloItem;
+using System.Numerics;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
     public class Tema : EntidadeBase
     {
-        public string nome;
         //variaveis
+        public string Nome { get; set; }
+        public decimal Valor { get; set; }
         public List<Item> Itens { get; set; }
+        public List<Aluguel> HistoriocoAlugueis { get; set; }
 
-        public Tema(string descricao)
+        //contrutor vazil para o json
+        public Tema() { }
+
+        //contrutor para o cadastro
+        public Tema(string nome, List<Item> itens)
         {
-            nome = descricao;
+            Nome = nome;
+            Itens = itens;
+            HistoriocoAlugueis = new List<Aluguel>();
+            Valor = CalcularValor(itens);
         }
+
         //add itens e somando valor do total de itens
         public void AdicionarItem(Item item)
         {
@@ -20,11 +32,6 @@ namespace FestasInfantis.WinApp.ModuloTema
                 Itens = new List<Item>();
 
             Itens.Add(item);
-        }
-
-        public decimal CalcularValor()
-        {
-            return Itens.Aggregate(0m, (soma, item) => soma + item.Valor);
         }
 
         public void AtualizarItens(List<Item> itens)
@@ -37,29 +44,40 @@ namespace FestasInfantis.WinApp.ModuloTema
             Tema novo = (Tema)novoRegistro;
 
             this.Id = novo.Id;
-            this.nome = novo.nome;
+            this.Nome = novo.Nome;
             this.Itens = novo.Itens;
+            this.HistoriocoAlugueis = novo.HistoriocoAlugueis;
         }
 
         public override string ToString()
         {
-            return $"{nome}";
+            return $"{Nome}";
         }
         //validando informações
         public override List<String> Validar()
         {
             List<string> erros = new List<string>();
 
-            if (string.IsNullOrEmpty(nome))
+            if (string.IsNullOrEmpty(Nome))
                 erros.Add("O campo 'Nome' é obrigatório");
 
-            if (nome.Length < 3)
+            if (Nome.Length < 3)
                 erros.Add("O campo 'Nome' deve conter no mínimo 3 caracteres");
 
-            if (CalcularValor() < 1)
-                erros.Add("O campo 'Valor' não pode receber o valor 0");
+            if (this.Itens.Count == 0)
+                erros.Add("Precisa selecionar pelomenos um item para o tema");
 
             return erros;
+        }
+
+        //responsavel por calcular o valor total do tema
+        private decimal CalcularValor(List<Item> itens)
+        {
+            decimal total = 0;
+            foreach (Item i in itens)
+                total += i.Valor;
+
+            return total;
         }
     }
 }

@@ -77,6 +77,13 @@ namespace FestasInfantis.WinApp
             ConfigurarTelaPrincipal(controlador);
         }
 
+        private void temaMenuItem_Click(object sender, EventArgs e)
+        {
+            this.controlador = new ControladorTema(repositorioTema,repositorioItem);
+
+            ConfigurarTelaPrincipal(controlador);
+        }
+
         //botoes
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -92,5 +99,7 @@ namespace FestasInfantis.WinApp
         {
             controlador.Excluir();
         }
+
+        
     }
 }

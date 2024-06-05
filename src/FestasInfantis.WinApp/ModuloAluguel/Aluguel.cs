@@ -41,12 +41,12 @@ namespace FestasInfantis.WinApp.ModuloAluguel
 
         public decimal CalcularValorEntrada()
         {
-            return Tema.CalcularValor() * ValorEntrada / 100;
+            return 0;
         }
 
         public decimal CalcularValorDesconto()
         {
-            return Tema.CalcularValor() - Tema.CalcularValor() * ValorDesconto / 100;
+            return 0;
         }
 
         public void Concluir()
