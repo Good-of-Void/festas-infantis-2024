@@ -1,4 +1,5 @@
 ﻿
+
 namespace FestasInfantis.WinApp.ModuloCliente
 {
     partial class TelaClienteForm
@@ -204,7 +205,17 @@ namespace FestasInfantis.WinApp.ModuloCliente
             ResumeLayout(false);
         }
 
-        
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void txtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
         #endregion
 
