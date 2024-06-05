@@ -1,13 +1,9 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace FestasInfantis.WinApp.ModuloItem
 {
-    public class RepositorioTemaEmMemoria : RepositorioBaseEmMemoria<Item> , IRepositorioItem 
+    public class RepositorioItemEmMemoria : RepositorioBaseEmMemoria<Item> , IRepositorioItem 
     {
     }
 }

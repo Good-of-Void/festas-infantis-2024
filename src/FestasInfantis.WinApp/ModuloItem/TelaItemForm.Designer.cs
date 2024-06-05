@@ -36,19 +36,19 @@
             label2 = new Label();
             txtId = new TextBox();
             label1 = new Label();
-            txtValor = new DomainUpDown();
+            txtValor = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(219, 226, 239);
-            panel1.Controls.Add(txtValor);
             panel1.Controls.Add(brnGravar);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(txtDescricao);
             panel1.Controls.Add(label2);
+            panel1.Controls.Add(txtValor);
             panel1.Controls.Add(txtId);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(12, 12);
@@ -64,9 +64,10 @@
             brnGravar.Location = new Point(474, 197);
             brnGravar.Name = "brnGravar";
             brnGravar.Size = new Size(135, 55);
-            brnGravar.TabIndex = 10;
+            brnGravar.TabIndex = 3;
             brnGravar.Text = "Gravar";
             brnGravar.UseVisualStyleBackColor = false;
+            brnGravar.Click += brnGravar_Click;
             // 
             // btnCancelar
             // 
@@ -76,9 +77,10 @@
             btnCancelar.Location = new Point(629, 197);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(135, 55);
-            btnCancelar.TabIndex = 10;
+            btnCancelar.TabIndex = 4;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // label4
             // 
@@ -100,7 +102,6 @@
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(606, 35);
             txtDescricao.TabIndex = 0;
-            txtDescricao.Text = "0";
             // 
             // label2
             // 
@@ -141,11 +142,10 @@
             txtValor.BackColor = Color.FromArgb(249, 247, 247);
             txtValor.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtValor.ForeColor = Color.FromArgb(63, 114, 175);
-            txtValor.Location = new Point(158, 142);
+            txtValor.Location = new Point(158, 141);
             txtValor.Name = "txtValor";
-            txtValor.Size = new Size(149, 35);
-            txtValor.TabIndex = 11;
-            txtValor.Text = "50";
+            txtValor.Size = new Size(170, 35);
+            txtValor.TabIndex = 9;
             // 
             // TelaItemForm
             // 
@@ -157,6 +157,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "TelaItemForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Tela Item";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -173,6 +174,6 @@
         private Label label2;
         private TextBox txtId;
         private Label label1;
-        private DomainUpDown txtValor;
+        private TextBox txtValor;
     }
 }

@@ -24,7 +24,7 @@ namespace FestasInfantis.WinApp.ModuloTema
 
         public decimal CalcularValor()
         {
-            return Itens.Aggregate(0m, (soma, item) => soma + item.valor);
+            return Itens.Aggregate(0m, (soma, item) => soma + item.Valor);
         }
 
         public void AtualizarItens(List<Item> itens)

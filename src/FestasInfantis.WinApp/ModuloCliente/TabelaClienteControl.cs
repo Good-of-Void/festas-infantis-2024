@@ -1,14 +1,4 @@
-﻿using eAgenda.WinApp.Compartilhado;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿
 namespace FestasInfantis.WinApp.ModuloCliente
 {
     public partial class TabelaClienteControl : UserControl
@@ -19,8 +9,8 @@ namespace FestasInfantis.WinApp.ModuloCliente
 
             grid.Columns.AddRange(ObterColunas());
 
-            grid.ConfigurarGridSomenteLeitura();
-            grid.ConfigurarGridZebrado();
+            //grid.ConfigurarGridSomenteLeitura();
+            //grid.ConfigurarGridZebrado();
         }
 
         //precisa arrumar 
@@ -28,14 +18,14 @@ namespace FestasInfantis.WinApp.ModuloCliente
         {
             grid.Rows.Clear();
 
-            foreach (Cliente c in Clientes)
-                grid.Rows.Add(c.Id, c.Nome.ToTitleCase(), c.Telefone, c.Email, c.Empresa, c.Cargo);
+            //foreach (Cliente c in Clientes)
+                //grid.Rows.Add(c.Id, c.Nome.ToTitleCase(), c.Telefone, c.Email, c.Empresa, c.Cargo);
         }
 
-        public int ObterRegistroSelecionado()
-        {
-            return grid.SelecionarId();
-        }
+       // public int ObterRegistroSelecionado()
+        //{
+            //return grid.SelecionarId();
+       // }
 
         private DataGridViewColumn[] ObterColunas()
         {
