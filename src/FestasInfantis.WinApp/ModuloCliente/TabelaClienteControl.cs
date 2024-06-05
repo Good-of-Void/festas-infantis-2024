@@ -21,12 +21,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
             grid.Rows.Clear();
 
             foreach (Cliente c in Clientes)
-                grid.Rows.Add(c.Id, c.Nome, c.Telefone, c.Nome, c.Alugueis, c.QuantidadeAlugueis);
+                grid.Rows.Add(c.Id, c.Nome, c.Telefone, c.CPF, c.Alugueis);
         }
 
         public int ObterRegistroSelecionado()
         {
-            return 0;
+            return grid.SelecionarId();
         }
 
         private DataGridViewColumn[] ObterColunas()
@@ -36,8 +36,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
                 new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id" },
                 new DataGridViewTextBoxColumn { DataPropertyName = "Nome", HeaderText = "Nome" },
                 new DataGridViewTextBoxColumn { DataPropertyName = "Telefone", HeaderText = "Telefone" },
-                new DataGridViewTextBoxColumn { DataPropertyName = "Cpf", HeaderText = "Cpf" },
-                new DataGridViewTextBoxColumn { DataPropertyName = "Alugueis", HeaderText = "Alugueis" },                                             
+                new DataGridViewTextBoxColumn { DataPropertyName = "Cpf", HeaderText = "Cpf" },                                                           
                         };
         }
     }
