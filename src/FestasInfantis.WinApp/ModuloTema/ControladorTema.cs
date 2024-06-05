@@ -28,6 +28,10 @@ namespace FestasInfantis.WinApp.ModuloTema
             TelaTemaForm telaTema = new TelaTemaForm();
             telaTema.repositorioItem = RepositorioItem;
 
+            List<Item> itens = RepositorioItem.SelecionarTodos();
+
+            telaTema.AtualizarGrid(itens);
+
             DialogResult resultado = telaTema.ShowDialog();
 
             if (resultado != DialogResult.OK)

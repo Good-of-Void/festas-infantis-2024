@@ -26,7 +26,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             InitializeComponent();
 
             //ver depois
-            grid.ConfigurarGridSomenteLeitura();
+            this.ConfigurarGridItens();
             grid.ConfigurarGridZebrado();
         }
 
@@ -81,6 +81,26 @@ namespace FestasInfantis.WinApp.ModuloTema
                 }
             }
             return itens;
+        }
+        private void ConfigurarGridItens()
+        {
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+
+            grid.BorderStyle = BorderStyle.None;
+
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            grid.MultiSelect = true;
+            grid.ReadOnly = false;
+
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.AutoGenerateColumns = false;
+
+            grid.AllowUserToResizeRows = false;
+            grid.RowHeadersVisible = false;
         }
     }
 }
