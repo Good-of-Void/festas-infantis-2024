@@ -126,7 +126,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(189, 30);
             txtTelefone.TabIndex = 2;
-            txtTelefone.MaskInputRejected += txtTelefone_MaskInputRejected;
+            //txtTelefone.MaskInputRejected += txtTelefone_MaskInputRejected;
             // 
             // label3
             // 
@@ -150,7 +150,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             txtNome.Size = new Size(392, 30);
             txtNome.TabIndex = 0;
             txtNome.Text = "0";
-            txtNome.TextChanged += txtNome_TextChanged;
+            //txtNome.TextChanged += txtNome_TextChanged;
             // 
             // label2
             // 
@@ -205,16 +205,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             ResumeLayout(false);
         }
 
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void txtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+     
 
 
         #endregion

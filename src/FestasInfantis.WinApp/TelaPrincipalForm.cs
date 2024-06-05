@@ -1,4 +1,5 @@
 using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloCliente;
 using FestasInfantis.WinApp.ModuloItem;
 using FestasInfantis.WinApp.ModuloTema;
 
@@ -10,6 +11,7 @@ namespace FestasInfantis.WinApp
 
         IRepositorioItem repositorioItem;
         IRepositorioTema repositorioTema;
+        IRepositorioCliente repositorioCliente;
 
         public static TelaPrincipalForm Instancia { get; private set; }
 
@@ -22,6 +24,7 @@ namespace FestasInfantis.WinApp
 
             repositorioItem = new RepositorioItemEmArquivo();
             repositorioTema = new RepositorioTemaEmArquivo();
+            repositorioCliente = new RepositorioClienteEmArquivo();
         }
 
         public void AtualizarRodape(string texto)
@@ -76,7 +79,12 @@ namespace FestasInfantis.WinApp
 
             ConfigurarTelaPrincipal(controlador);
         }
+        private void clienteMenuItem_Click(object sender, EventArgs e)
+        {
+            this.controlador = new ControladorCliente(repositorioCliente);
 
+            ConfigurarTelaPrincipal(controlador);
+        }
         //botoes
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
@@ -92,5 +100,7 @@ namespace FestasInfantis.WinApp
         {
             controlador.Excluir();
         }
+
+       
     }
 }
