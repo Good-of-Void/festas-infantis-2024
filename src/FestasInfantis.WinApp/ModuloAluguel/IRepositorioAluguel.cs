@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
-    internal class RepositorioAluguel
+    public interface IRepositorioAluguel
     {
     }
 }
