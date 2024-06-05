@@ -74,8 +74,12 @@ namespace FestasInfantis.WinApp.ModuloTema
 
                 if (selecionado)
                 {
+
+
                     int id = Convert.ToInt32(linha.Cells["Id"].Value);
                     Item add = item.SelecionarPorId(id);
+                    add.TemTema = true;
+                    repositorioItem.Editar(add.Id, add);
 
                     itens.Add(add);
                 }

@@ -28,9 +28,9 @@ namespace FestasInfantis.WinApp.ModuloTema
             TelaTemaForm telaTema = new TelaTemaForm();
             telaTema.repositorioItem = RepositorioItem;
 
-            List<Item> itens = RepositorioItem.SelecionarTodos();
+            
 
-            telaTema.AtualizarGrid(itens);
+            telaTema.AtualizarGrid(this.itensDisponiveis());
 
             DialogResult resultado = telaTema.ShowDialog();
 
@@ -129,6 +129,20 @@ namespace FestasInfantis.WinApp.ModuloTema
             List<Tema> temas = RepositorioTema.SelecionarTodos();
 
             tabelaTema.AtualizarRegistros(temas);
+        }
+
+        private List<Item> itensDisponiveis()
+        {
+            List<Item> itens = RepositorioItem.SelecionarTodos();
+
+            List<Item> disponiveis = new List<Item>();
+
+            foreach (Item item in itens)
+            {
+                if(!item.TemTema)
+                   disponiveis.Add(item);
+            }
+            return disponiveis;
         }
     }
 }
