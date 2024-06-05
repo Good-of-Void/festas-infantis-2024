@@ -119,9 +119,9 @@ namespace FestasInfantis.WinApp.ModuloItem
 
         private void CarregarItem()
         {
-            List<Item> contatos = repositorioItem.SelecionarTodos();
+            List<Item> itens = repositorioItem.SelecionarTodos();
 
-            TabelaItem.AtualizarRegistros(contatos);
+            TabelaItem.AtualizarRegistros(itens);
         }
     }
 }

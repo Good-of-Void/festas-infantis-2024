@@ -83,10 +83,16 @@ namespace FestasInfantis.WinApp
         {
             this.controlador = new ControladorCliente(repositorioCliente);
 
+            private void temaMenuItem_Click(object sender, EventArgs e)
+            {
+                this.controlador = new ControladorTema(repositorioTema, repositorioItem);
+
+                ConfigurarTelaPrincipal(controlador);
+            }
             ConfigurarTelaPrincipal(controlador);
         }
-        //botoes
-        private void btnAdicionar_Click(object sender, EventArgs e)
+            //botoes
+            private void btnAdicionar_Click(object sender, EventArgs e)
         {
             controlador.Adicionar();
         }
@@ -100,7 +106,5 @@ namespace FestasInfantis.WinApp
         {
             controlador.Excluir();
         }
-
-       
     }
 }

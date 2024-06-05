@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            grid = new DataGridView();
             brnGravar = new Button();
             btnCancelar = new Button();
             label3 = new Label();
@@ -36,18 +37,18 @@
             label2 = new Label();
             txtId = new TextBox();
             label1 = new Label();
-            Grid = new DataGridView();
             CheckItem = new DataGridViewCheckBoxColumn();
+            Id = new DataGridViewTextBoxColumn();
             Descricao = new DataGridViewTextBoxColumn();
             Valor = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Grid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(219, 226, 239);
-            panel1.Controls.Add(Grid);
+            panel1.Controls.Add(grid);
             panel1.Controls.Add(brnGravar);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(label3);
@@ -60,6 +61,18 @@
             panel1.Size = new Size(648, 543);
             panel1.TabIndex = 1;
             // 
+            // grid
+            // 
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grid.BackgroundColor = Color.FromArgb(63, 114, 175);
+            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid.Columns.AddRange(new DataGridViewColumn[] { CheckItem, Id, Descricao, Valor });
+            grid.Location = new Point(20, 189);
+            grid.Name = "grid";
+            grid.RowHeadersWidth = 51;
+            grid.Size = new Size(612, 288);
+            grid.TabIndex = 11;
+            // 
             // brnGravar
             // 
             brnGravar.BackColor = Color.FromArgb(249, 247, 247);
@@ -71,6 +84,7 @@
             brnGravar.TabIndex = 10;
             brnGravar.Text = "Gravar";
             brnGravar.UseVisualStyleBackColor = false;
+            brnGravar.Click += brnGravar_Click;
             // 
             // btnCancelar
             // 
@@ -83,6 +97,7 @@
             btnCancelar.TabIndex = 10;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // label3
             // 
@@ -104,7 +119,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(447, 35);
             txtNome.TabIndex = 0;
-            txtNome.Text = "0";
             // 
             // label2
             // 
@@ -140,18 +154,6 @@
             label1.TabIndex = 0;
             label1.Text = "Id";
             // 
-            // Grid
-            // 
-            Grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Grid.BackgroundColor = Color.FromArgb(63, 114, 175);
-            Grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Grid.Columns.AddRange(new DataGridViewColumn[] { CheckItem, Descricao, Valor });
-            Grid.Location = new Point(20, 189);
-            Grid.Name = "Grid";
-            Grid.RowHeadersWidth = 51;
-            Grid.Size = new Size(612, 288);
-            Grid.TabIndex = 11;
-            // 
             // CheckItem
             // 
             CheckItem.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
@@ -159,6 +161,14 @@
             CheckItem.MinimumWidth = 6;
             CheckItem.Name = "CheckItem";
             CheckItem.Width = 50;
+            // 
+            // Id
+            // 
+            Id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Id.HeaderText = "Id";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.Width = 40;
             // 
             // Descricao
             // 
@@ -169,7 +179,7 @@
             Descricao.Name = "Descricao";
             Descricao.Resizable = DataGridViewTriState.True;
             Descricao.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Descricao.Width = 380;
+            Descricao.Width = 340;
             // 
             // Valor
             // 
@@ -185,18 +195,21 @@
             BackColor = Color.FromArgb(17, 45, 78);
             ClientSize = new Size(672, 564);
             Controls.Add(panel1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "TelaTemaForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "TelaTemaForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)Grid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private DataGridView Grid;
+        private DataGridView grid;
         private Button brnGravar;
         private Button btnCancelar;
         private Label label3;
@@ -205,6 +218,7 @@
         private TextBox txtId;
         private Label label1;
         private DataGridViewCheckBoxColumn CheckItem;
+        private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Descricao;
         private DataGridViewTextBoxColumn Valor;
     }

@@ -93,6 +93,7 @@
             temaMenuItem.Name = "temaMenuItem";
             temaMenuItem.Size = new Size(180, 24);
             temaMenuItem.Text = "Temas";
+            temaMenuItem.Click += temaMenuItem_Click;
             // 
             // aluguelMenuItem
             // 

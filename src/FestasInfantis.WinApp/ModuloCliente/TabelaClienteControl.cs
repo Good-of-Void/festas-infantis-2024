@@ -21,12 +21,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
             grid.Rows.Clear();
 
             foreach (Cliente c in Clientes)
-                grid.Rows.Add(c.Id, c.Nome, c.Telefone, c.CPF, c.Alugueis, c.QuantidadeAlugueis);
+                grid.Rows.Add(c.Id, c.Nome, c.Telefone, c.Nome, c.Alugueis, c.QuantidadeAlugueis);
         }
 
         public int ObterRegistroSelecionado()
         {
-            return grid.SelecionarId();
+            return 0;
         }
 
         private DataGridViewColumn[] ObterColunas()
