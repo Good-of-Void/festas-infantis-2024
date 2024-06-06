@@ -38,8 +38,18 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             if (brnGravar.Text.Equals("Próximo"))
             {
                 this.festa = TelaFesta.Festa;
-                Console.WriteLine("");
+
+                this.brnGravar.Text = "Gravar";
+                this.lblTitulo.Text = "Dados do Aluguel";
+
+                TelaAluguelControl telaAluguelCon = new TelaAluguelControl();
+                telaAluguelCon.Dock = DockStyle.Fill;
+
+                this.painelPrincipal.Controls.Add(telaAluguelCon);
             }
+
+
+
         }
         private void ProximaTela()
         {
