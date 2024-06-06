@@ -16,5 +16,15 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         {
             InitializeComponent();
         }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
