@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            txtData = new DateTimePicker();
-            label2 = new Label();
-            label3 = new Label();
-            txtHoraInicio = new MaskedTextBox();
             txtHoraTermino = new MaskedTextBox();
+            txtHoraInicio = new MaskedTextBox();
+            txtData = new DateTimePicker();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             groupBox2 = new GroupBox();
+            txtNumero = new TextBox();
+            label8 = new Label();
+            txtBairro = new TextBox();
+            txtRua = new TextBox();
+            txtEstado = new TextBox();
+            label7 = new Label();
+            txtCidade = new TextBox();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            txtCidade = new TextBox();
-            label7 = new Label();
-            txtEstado = new TextBox();
-            txtRua = new TextBox();
-            txtBairro = new TextBox();
-            label8 = new Label();
-            txtNumero = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -67,16 +67,29 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Data e Hora";
             // 
-            // label1
+            // txtHoraTermino
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(63, 114, 175);
-            label1.Location = new Point(47, 54);
-            label1.Name = "label1";
-            label1.Size = new Size(187, 28);
-            label1.TabIndex = 10;
-            label1.Text = "Data da Festa";
+            txtHoraTermino.BackColor = Color.FromArgb(249, 247, 247);
+            txtHoraTermino.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtHoraTermino.ForeColor = Color.FromArgb(63, 114, 175);
+            txtHoraTermino.Location = new Point(240, 165);
+            txtHoraTermino.Mask = "00:00";
+            txtHoraTermino.Name = "txtHoraTermino";
+            txtHoraTermino.Size = new Size(82, 35);
+            txtHoraTermino.TabIndex = 2;
+            txtHoraTermino.ValidatingType = typeof(DateTime);
+            // 
+            // txtHoraInicio
+            // 
+            txtHoraInicio.BackColor = Color.FromArgb(249, 247, 247);
+            txtHoraInicio.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtHoraInicio.ForeColor = Color.FromArgb(63, 114, 175);
+            txtHoraInicio.Location = new Point(240, 108);
+            txtHoraInicio.Mask = "00:00";
+            txtHoraInicio.Name = "txtHoraInicio";
+            txtHoraInicio.Size = new Size(82, 35);
+            txtHoraInicio.TabIndex = 1;
+            txtHoraInicio.ValidatingType = typeof(DateTime);
             // 
             // txtData
             // 
@@ -85,18 +98,7 @@
             txtData.Location = new Point(240, 49);
             txtData.Name = "txtData";
             txtData.Size = new Size(250, 35);
-            txtData.TabIndex = 11;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 114, 175);
-            label2.Location = new Point(39, 111);
-            label2.Name = "label2";
-            label2.Size = new Size(195, 28);
-            label2.TabIndex = 10;
-            label2.Text = "Hora de Inicío";
+            txtData.TabIndex = 0;
             // 
             // label3
             // 
@@ -109,29 +111,27 @@
             label3.TabIndex = 10;
             label3.Text = "Hora de Termino";
             // 
-            // txtHoraInicio
+            // label2
             // 
-            txtHoraInicio.BackColor = Color.FromArgb(249, 247, 247);
-            txtHoraInicio.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtHoraInicio.ForeColor = Color.FromArgb(63, 114, 175);
-            txtHoraInicio.Location = new Point(240, 108);
-            txtHoraInicio.Mask = "00:00";
-            txtHoraInicio.Name = "txtHoraInicio";
-            txtHoraInicio.Size = new Size(82, 35);
-            txtHoraInicio.TabIndex = 12;
-            txtHoraInicio.ValidatingType = typeof(DateTime);
+            label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(63, 114, 175);
+            label2.Location = new Point(39, 111);
+            label2.Name = "label2";
+            label2.Size = new Size(195, 28);
+            label2.TabIndex = 10;
+            label2.Text = "Hora de Inicío";
             // 
-            // txtHoraTermino
+            // label1
             // 
-            txtHoraTermino.BackColor = Color.FromArgb(249, 247, 247);
-            txtHoraTermino.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtHoraTermino.ForeColor = Color.FromArgb(63, 114, 175);
-            txtHoraTermino.Location = new Point(240, 165);
-            txtHoraTermino.Mask = "00:00";
-            txtHoraTermino.Name = "txtHoraTermino";
-            txtHoraTermino.Size = new Size(82, 35);
-            txtHoraTermino.TabIndex = 12;
-            txtHoraTermino.ValidatingType = typeof(DateTime);
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(63, 114, 175);
+            label1.Location = new Point(47, 54);
+            label1.Name = "label1";
+            label1.Size = new Size(187, 28);
+            label1.TabIndex = 10;
+            label1.Text = "Data da Festa";
             // 
             // groupBox2
             // 
@@ -153,6 +153,78 @@
             groupBox2.TabIndex = 13;
             groupBox2.TabStop = false;
             groupBox2.Text = "Dados do Endereço";
+            // 
+            // txtNumero
+            // 
+            txtNumero.BackColor = Color.FromArgb(249, 247, 247);
+            txtNumero.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumero.ForeColor = Color.FromArgb(63, 114, 175);
+            txtNumero.Location = new Point(529, 168);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(164, 35);
+            txtNumero.TabIndex = 7;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(63, 114, 175);
+            label8.Location = new Point(410, 168);
+            label8.Name = "label8";
+            label8.Size = new Size(113, 28);
+            label8.TabIndex = 16;
+            label8.Text = "Numero";
+            // 
+            // txtBairro
+            // 
+            txtBairro.BackColor = Color.FromArgb(249, 247, 247);
+            txtBairro.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBairro.ForeColor = Color.FromArgb(63, 114, 175);
+            txtBairro.Location = new Point(124, 165);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(269, 35);
+            txtBairro.TabIndex = 6;
+            // 
+            // txtRua
+            // 
+            txtRua.BackColor = Color.FromArgb(249, 247, 247);
+            txtRua.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtRua.ForeColor = Color.FromArgb(63, 114, 175);
+            txtRua.Location = new Point(124, 101);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(569, 35);
+            txtRua.TabIndex = 5;
+            // 
+            // txtEstado
+            // 
+            txtEstado.BackColor = Color.FromArgb(249, 247, 247);
+            txtEstado.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEstado.ForeColor = Color.FromArgb(63, 114, 175);
+            txtEstado.Location = new Point(515, 46);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(178, 35);
+            txtEstado.TabIndex = 4;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(63, 114, 175);
+            label7.Location = new Point(410, 46);
+            label7.Name = "label7";
+            label7.Size = new Size(99, 28);
+            label7.TabIndex = 12;
+            label7.Text = "Estado";
+            // 
+            // txtCidade
+            // 
+            txtCidade.BackColor = Color.FromArgb(249, 247, 247);
+            txtCidade.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCidade.ForeColor = Color.FromArgb(63, 114, 175);
+            txtCidade.Location = new Point(124, 43);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(269, 35);
+            txtCidade.TabIndex = 3;
             // 
             // label4
             // 
@@ -186,78 +258,6 @@
             label6.Size = new Size(99, 28);
             label6.TabIndex = 10;
             label6.Text = "Cidade";
-            // 
-            // txtCidade
-            // 
-            txtCidade.BackColor = Color.FromArgb(249, 247, 247);
-            txtCidade.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCidade.ForeColor = Color.FromArgb(63, 114, 175);
-            txtCidade.Location = new Point(124, 43);
-            txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(269, 35);
-            txtCidade.TabIndex = 11;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(63, 114, 175);
-            label7.Location = new Point(410, 46);
-            label7.Name = "label7";
-            label7.Size = new Size(99, 28);
-            label7.TabIndex = 12;
-            label7.Text = "Estado";
-            // 
-            // txtEstado
-            // 
-            txtEstado.BackColor = Color.FromArgb(249, 247, 247);
-            txtEstado.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEstado.ForeColor = Color.FromArgb(63, 114, 175);
-            txtEstado.Location = new Point(515, 46);
-            txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(178, 35);
-            txtEstado.TabIndex = 13;
-            // 
-            // txtRua
-            // 
-            txtRua.BackColor = Color.FromArgb(249, 247, 247);
-            txtRua.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRua.ForeColor = Color.FromArgb(63, 114, 175);
-            txtRua.Location = new Point(124, 101);
-            txtRua.Name = "txtRua";
-            txtRua.Size = new Size(569, 35);
-            txtRua.TabIndex = 14;
-            // 
-            // txtBairro
-            // 
-            txtBairro.BackColor = Color.FromArgb(249, 247, 247);
-            txtBairro.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBairro.ForeColor = Color.FromArgb(63, 114, 175);
-            txtBairro.Location = new Point(124, 165);
-            txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(269, 35);
-            txtBairro.TabIndex = 15;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.FromArgb(63, 114, 175);
-            label8.Location = new Point(410, 168);
-            label8.Name = "label8";
-            label8.Size = new Size(113, 28);
-            label8.TabIndex = 16;
-            label8.Text = "Numero";
-            // 
-            // txtNumero
-            // 
-            txtNumero.BackColor = Color.FromArgb(249, 247, 247);
-            txtNumero.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNumero.ForeColor = Color.FromArgb(63, 114, 175);
-            txtNumero.Location = new Point(529, 168);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(164, 35);
-            txtNumero.TabIndex = 17;
             // 
             // TelaFestaControl
             // 
