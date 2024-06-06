@@ -9,6 +9,8 @@ namespace FestasInfantis.WinApp
     {
         ControladorBase controlador;
 
+        ContextoDados contexto;
+
         IRepositorioItem repositorioItem;
         IRepositorioTema repositorioTema;
         IRepositorioCliente repositorioCliente;
@@ -22,9 +24,11 @@ namespace FestasInfantis.WinApp
             lblTipoCadastro.Text = string.Empty;
             Instancia = this;
 
-            repositorioItem = new RepositorioItemEmArquivo();
-            repositorioTema = new RepositorioTemaEmArquivo();
-            repositorioCliente = new RepositorioClienteEmArquivo();
+            contexto = new ContextoDados(carregarDados: true);
+
+            repositorioItem = new RepositorioItemEmArquivo(contexto);
+            repositorioTema = new RepositorioTemaEmArquivo(contexto);
+            repositorioCliente = new RepositorioClienteEmArquivo(contexto);
         }
 
         public void AtualizarRodape(string texto)

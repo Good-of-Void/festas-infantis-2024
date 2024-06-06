@@ -9,9 +9,13 @@ namespace FestasInfantis.WinApp.ModuloItem
 {
     public class RepositorioItemEmArquivo : RepositorioBaseEmArquivo<Item> , IRepositorioItem
     {
-        public RepositorioItemEmArquivo() : base("Itens.json")
+        public RepositorioItemEmArquivo(ContextoDados contexto) : base(contexto)
         {
 
+        }
+        protected override List<Item> ObterRegistros()
+        {
+            return contexto.Itens;
         }
     }
 }

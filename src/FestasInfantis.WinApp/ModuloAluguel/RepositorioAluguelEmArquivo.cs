@@ -4,9 +4,13 @@ namespace FestasInfantis.WinApp.ModuloAluguel
 {
     public class RepositorioAluguelEmArquivo : RepositorioBaseEmArquivo<Aluguel>, IRepositorioAluguel
     {
-        public RepositorioAluguelEmArquivo() : base("Aluguel.json")
+        public RepositorioAluguelEmArquivo(ContextoDados contexto) : base(contexto)
         {
 
+        }
+        protected override List<Aluguel> ObterRegistros()
+        {
+            return contexto.Alugueis;
         }
     }
 }
