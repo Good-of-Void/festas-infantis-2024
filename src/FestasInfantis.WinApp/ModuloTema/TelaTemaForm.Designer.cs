@@ -168,6 +168,7 @@
             Id.HeaderText = "Id";
             Id.MinimumWidth = 6;
             Id.Name = "Id";
+            Id.ReadOnly = true;
             Id.Width = 40;
             // 
             // Descricao
@@ -177,6 +178,7 @@
             Descricao.HeaderText = "Descrição do item";
             Descricao.MinimumWidth = 6;
             Descricao.Name = "Descricao";
+            Descricao.ReadOnly = true;
             Descricao.Resizable = DataGridViewTriState.True;
             Descricao.SortMode = DataGridViewColumnSortMode.NotSortable;
             Descricao.Width = 340;
@@ -187,6 +189,7 @@
             Valor.HeaderText = "Valor";
             Valor.MinimumWidth = 6;
             Valor.Name = "Valor";
+            Valor.ReadOnly = true;
             // 
             // TelaTemaForm
             // 

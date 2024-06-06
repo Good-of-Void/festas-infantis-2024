@@ -26,7 +26,7 @@ namespace FestasInfantis.WinApp.ModuloTema
             InitializeComponent();
 
             //ver depois
-            grid.ConfigurarGridSomenteLeitura();
+            this.ConfigurarGridItens();
             grid.ConfigurarGridZebrado();
         }
 
@@ -74,13 +74,37 @@ namespace FestasInfantis.WinApp.ModuloTema
 
                 if (selecionado)
                 {
+
+
                     int id = Convert.ToInt32(linha.Cells["Id"].Value);
                     Item add = item.SelecionarPorId(id);
+                    add.TemTema = true;
+                    repositorioItem.Editar(add.Id, add);
 
                     itens.Add(add);
                 }
             }
             return itens;
+        }
+        private void ConfigurarGridItens()
+        {
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+
+            grid.BorderStyle = BorderStyle.None;
+
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            grid.MultiSelect = true;
+            grid.ReadOnly = false;
+
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.AutoGenerateColumns = false;
+
+            grid.AllowUserToResizeRows = false;
+            grid.RowHeadersVisible = false;
         }
     }
 }
