@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            Painel = new Panel();
+            painelPrincipal = new Panel();
             brnGravar = new Button();
             btnCancelar = new Button();
             txtId = new TextBox();
@@ -41,7 +41,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(219, 226, 239);
-            panel1.Controls.Add(Painel);
+            panel1.Controls.Add(painelPrincipal);
             panel1.Controls.Add(brnGravar);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(txtId);
@@ -52,13 +52,13 @@
             panel1.Size = new Size(799, 726);
             panel1.TabIndex = 1;
             // 
-            // Painel
+            // painelPrincipal
             // 
-            Painel.Location = new Point(14, 135);
-            Painel.Margin = new Padding(3, 4, 3, 4);
-            Painel.Name = "Painel";
-            Painel.Size = new Size(769, 514);
-            Painel.TabIndex = 11;
+            painelPrincipal.Location = new Point(14, 135);
+            painelPrincipal.Margin = new Padding(3, 4, 3, 4);
+            painelPrincipal.Name = "painelPrincipal";
+            painelPrincipal.Size = new Size(769, 514);
+            painelPrincipal.TabIndex = 0;
             // 
             // brnGravar
             // 
@@ -68,9 +68,10 @@
             brnGravar.Location = new Point(486, 656);
             brnGravar.Name = "brnGravar";
             brnGravar.Size = new Size(135, 55);
-            brnGravar.TabIndex = 10;
+            brnGravar.TabIndex = 1;
             brnGravar.Text = "Gravar";
             brnGravar.UseVisualStyleBackColor = false;
+            brnGravar.Click += brnGravar_Click;
             // 
             // btnCancelar
             // 
@@ -80,7 +81,7 @@
             btnCancelar.Location = new Point(648, 656);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(135, 55);
-            btnCancelar.TabIndex = 10;
+            btnCancelar.TabIndex = 2;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
@@ -138,7 +139,7 @@
         #endregion
 
         private Panel panel1;
-        private Panel Painel;
+        private Panel painelPrincipal;
         private Button brnGravar;
         private Button btnCancelar;
         private TextBox txtId;
