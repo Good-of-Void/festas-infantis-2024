@@ -34,9 +34,9 @@
             label4 = new Label();
             txtDescricao = new TextBox();
             label2 = new Label();
+            txtValor = new TextBox();
             txtId = new TextBox();
             label1 = new Label();
-            txtValor = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             brnGravar.Location = new Point(474, 197);
             brnGravar.Name = "brnGravar";
             brnGravar.Size = new Size(135, 55);
-            brnGravar.TabIndex = 3;
+            brnGravar.TabIndex = 2;
             brnGravar.Text = "Gravar";
             brnGravar.UseVisualStyleBackColor = false;
             brnGravar.Click += brnGravar_Click;
@@ -77,7 +77,7 @@
             btnCancelar.Location = new Point(629, 197);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(135, 55);
-            btnCancelar.TabIndex = 4;
+            btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
@@ -114,6 +114,16 @@
             label2.TabIndex = 0;
             label2.Text = "Descrição";
             // 
+            // txtValor
+            // 
+            txtValor.BackColor = Color.FromArgb(249, 247, 247);
+            txtValor.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtValor.ForeColor = Color.FromArgb(63, 114, 175);
+            txtValor.Location = new Point(158, 141);
+            txtValor.Name = "txtValor";
+            txtValor.Size = new Size(170, 35);
+            txtValor.TabIndex = 1;
+            // 
             // txtId
             // 
             txtId.BackColor = Color.FromArgb(249, 247, 247);
@@ -136,16 +146,6 @@
             label1.Size = new Size(41, 28);
             label1.TabIndex = 0;
             label1.Text = "Id";
-            // 
-            // txtValor
-            // 
-            txtValor.BackColor = Color.FromArgb(249, 247, 247);
-            txtValor.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtValor.ForeColor = Color.FromArgb(63, 114, 175);
-            txtValor.Location = new Point(158, 141);
-            txtValor.Name = "txtValor";
-            txtValor.Size = new Size(170, 35);
-            txtValor.TabIndex = 9;
             // 
             // TelaItemForm
             // 

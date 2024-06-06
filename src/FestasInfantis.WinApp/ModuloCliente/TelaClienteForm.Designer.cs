@@ -57,10 +57,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtId);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(10, 9);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(11, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(578, 320);
+            panel1.Size = new Size(661, 427);
             panel1.TabIndex = 0;
             // 
             // brnGravar
@@ -68,10 +67,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
             brnGravar.BackColor = Color.FromArgb(249, 247, 247);
             brnGravar.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             brnGravar.ForeColor = Color.FromArgb(63, 114, 175);
-            brnGravar.Location = new Point(290, 266);
-            brnGravar.Margin = new Padding(3, 2, 3, 2);
+            brnGravar.Location = new Point(331, 355);
             brnGravar.Name = "brnGravar";
-            brnGravar.Size = new Size(118, 41);
+            brnGravar.Size = new Size(135, 55);
             brnGravar.TabIndex = 10;
             brnGravar.Text = "Gravar";
             brnGravar.UseVisualStyleBackColor = false;
@@ -82,10 +80,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
             btnCancelar.BackColor = Color.FromArgb(249, 247, 247);
             btnCancelar.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = Color.FromArgb(63, 114, 175);
-            btnCancelar.Location = new Point(424, 266);
-            btnCancelar.Margin = new Padding(3, 2, 3, 2);
+            btnCancelar.Location = new Point(485, 355);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(118, 41);
+            btnCancelar.Size = new Size(135, 55);
             btnCancelar.TabIndex = 10;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
@@ -96,11 +93,10 @@ namespace FestasInfantis.WinApp.ModuloCliente
             TxtCPF.BackColor = Color.FromArgb(249, 247, 247);
             TxtCPF.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             TxtCPF.ForeColor = Color.FromArgb(63, 114, 175);
-            TxtCPF.Location = new Point(151, 124);
-            TxtCPF.Margin = new Padding(3, 2, 3, 2);
+            TxtCPF.Location = new Point(173, 165);
             TxtCPF.Mask = "000,000,000-00";
             TxtCPF.Name = "TxtCPF";
-            TxtCPF.Size = new Size(176, 30);
+            TxtCPF.Size = new Size(201, 35);
             TxtCPF.TabIndex = 1;
             TxtCPF.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
@@ -109,9 +105,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
             label4.AutoSize = true;
             label4.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(63, 114, 175);
-            label4.Location = new Point(93, 126);
+            label4.Location = new Point(106, 168);
             label4.Name = "label4";
-            label4.Size = new Size(50, 23);
+            label4.Size = new Size(61, 28);
             label4.TabIndex = 0;
             label4.Text = "CPF";
             // 
@@ -120,22 +116,20 @@ namespace FestasInfantis.WinApp.ModuloCliente
             txtTelefone.BackColor = Color.FromArgb(249, 247, 247);
             txtTelefone.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefone.ForeColor = Color.FromArgb(63, 114, 175);
-            txtTelefone.Location = new Point(151, 176);
-            txtTelefone.Margin = new Padding(3, 2, 3, 2);
+            txtTelefone.Location = new Point(173, 235);
             txtTelefone.Mask = "(99) 90000-0000";
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(189, 30);
+            txtTelefone.Size = new Size(215, 35);
             txtTelefone.TabIndex = 2;
-            //txtTelefone.MaskInputRejected += txtTelefone_MaskInputRejected;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(63, 114, 175);
-            label3.Location = new Point(38, 181);
+            label3.Location = new Point(43, 241);
             label3.Name = "label3";
-            label3.Size = new Size(104, 23);
+            label3.Size = new Size(123, 28);
             label3.TabIndex = 0;
             label3.Text = "Telefone";
             // 
@@ -144,22 +138,19 @@ namespace FestasInfantis.WinApp.ModuloCliente
             txtNome.BackColor = Color.FromArgb(249, 247, 247);
             txtNome.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNome.ForeColor = Color.FromArgb(63, 114, 175);
-            txtNome.Location = new Point(151, 75);
-            txtNome.Margin = new Padding(3, 2, 3, 2);
+            txtNome.Location = new Point(173, 100);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(392, 30);
+            txtNome.Size = new Size(447, 35);
             txtNome.TabIndex = 0;
-            txtNome.Text = "0";
-            //txtNome.TextChanged += txtNome_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(63, 114, 175);
-            label2.Location = new Point(71, 77);
+            label2.Location = new Point(81, 103);
             label2.Name = "label2";
-            label2.Size = new Size(72, 23);
+            label2.Size = new Size(86, 28);
             label2.TabIndex = 0;
             label2.Text = "Nome";
             // 
@@ -169,10 +160,9 @@ namespace FestasInfantis.WinApp.ModuloCliente
             txtId.Enabled = false;
             txtId.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtId.ForeColor = Color.FromArgb(63, 114, 175);
-            txtId.Location = new Point(151, 28);
-            txtId.Margin = new Padding(3, 2, 3, 2);
+            txtId.Location = new Point(173, 37);
             txtId.Name = "txtId";
-            txtId.Size = new Size(52, 30);
+            txtId.Size = new Size(59, 35);
             txtId.TabIndex = 9;
             txtId.Text = "0";
             // 
@@ -181,20 +171,19 @@ namespace FestasInfantis.WinApp.ModuloCliente
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(63, 114, 175);
-            label1.Location = new Point(110, 34);
+            label1.Location = new Point(126, 45);
             label1.Name = "label1";
-            label1.Size = new Size(33, 23);
+            label1.Size = new Size(41, 28);
             label1.TabIndex = 0;
             label1.Text = "Id";
             // 
             // TelaClienteForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 45, 78);
-            ClientSize = new Size(599, 338);
+            ClientSize = new Size(685, 451);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "TelaClienteForm";
@@ -205,7 +194,7 @@ namespace FestasInfantis.WinApp.ModuloCliente
             ResumeLayout(false);
         }
 
-     
+
 
 
         #endregion

@@ -30,6 +30,10 @@
         {
             panel1 = new Panel();
             grid = new DataGridView();
+            CheckItem = new DataGridViewCheckBoxColumn();
+            Id = new DataGridViewTextBoxColumn();
+            Descricao = new DataGridViewTextBoxColumn();
+            Valor = new DataGridViewTextBoxColumn();
             brnGravar = new Button();
             btnCancelar = new Button();
             label3 = new Label();
@@ -37,10 +41,6 @@
             label2 = new Label();
             txtId = new TextBox();
             label1 = new Label();
-            CheckItem = new DataGridViewCheckBoxColumn();
-            Id = new DataGridViewTextBoxColumn();
-            Descricao = new DataGridViewTextBoxColumn();
-            Valor = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             SuspendLayout();
@@ -71,7 +71,44 @@
             grid.Name = "grid";
             grid.RowHeadersWidth = 51;
             grid.Size = new Size(612, 288);
-            grid.TabIndex = 11;
+            grid.TabIndex = 1;
+            // 
+            // CheckItem
+            // 
+            CheckItem.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            CheckItem.HeaderText = "Add";
+            CheckItem.MinimumWidth = 6;
+            CheckItem.Name = "CheckItem";
+            CheckItem.Width = 50;
+            // 
+            // Id
+            // 
+            Id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Id.HeaderText = "Id";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Width = 40;
+            // 
+            // Descricao
+            // 
+            Descricao.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Descricao.FillWeight = 191.836731F;
+            Descricao.HeaderText = "Descrição do item";
+            Descricao.MinimumWidth = 6;
+            Descricao.Name = "Descricao";
+            Descricao.ReadOnly = true;
+            Descricao.Resizable = DataGridViewTriState.True;
+            Descricao.SortMode = DataGridViewColumnSortMode.NotSortable;
+            Descricao.Width = 340;
+            // 
+            // Valor
+            // 
+            Valor.FillWeight = 8.163269F;
+            Valor.HeaderText = "Valor";
+            Valor.MinimumWidth = 6;
+            Valor.Name = "Valor";
+            Valor.ReadOnly = true;
             // 
             // brnGravar
             // 
@@ -81,7 +118,7 @@
             brnGravar.Location = new Point(356, 483);
             brnGravar.Name = "brnGravar";
             brnGravar.Size = new Size(135, 55);
-            brnGravar.TabIndex = 10;
+            brnGravar.TabIndex = 2;
             brnGravar.Text = "Gravar";
             brnGravar.UseVisualStyleBackColor = false;
             brnGravar.Click += brnGravar_Click;
@@ -94,7 +131,7 @@
             btnCancelar.Location = new Point(497, 483);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(135, 55);
-            btnCancelar.TabIndex = 10;
+            btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
@@ -153,43 +190,6 @@
             label1.Size = new Size(41, 28);
             label1.TabIndex = 0;
             label1.Text = "Id";
-            // 
-            // CheckItem
-            // 
-            CheckItem.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            CheckItem.HeaderText = "Add";
-            CheckItem.MinimumWidth = 6;
-            CheckItem.Name = "CheckItem";
-            CheckItem.Width = 50;
-            // 
-            // Id
-            // 
-            Id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Id.HeaderText = "Id";
-            Id.MinimumWidth = 6;
-            Id.Name = "Id";
-            Id.ReadOnly = true;
-            Id.Width = 40;
-            // 
-            // Descricao
-            // 
-            Descricao.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Descricao.FillWeight = 191.836731F;
-            Descricao.HeaderText = "Descrição do item";
-            Descricao.MinimumWidth = 6;
-            Descricao.Name = "Descricao";
-            Descricao.ReadOnly = true;
-            Descricao.Resizable = DataGridViewTriState.True;
-            Descricao.SortMode = DataGridViewColumnSortMode.NotSortable;
-            Descricao.Width = 340;
-            // 
-            // Valor
-            // 
-            Valor.FillWeight = 8.163269F;
-            Valor.HeaderText = "Valor";
-            Valor.MinimumWidth = 6;
-            Valor.Name = "Valor";
-            Valor.ReadOnly = true;
             // 
             // TelaTemaForm
             // 
