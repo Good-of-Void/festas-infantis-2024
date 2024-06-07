@@ -1,9 +1,11 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloTema;
 
 namespace FestasInfantis.WinApp.ModuloAluguel
 {
     public partial class TabelaAluguelControl : UserControl
     {
+        //contrutor
         public TabelaAluguelControl()
         {
             InitializeComponent();

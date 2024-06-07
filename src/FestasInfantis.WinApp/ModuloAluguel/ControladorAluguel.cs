@@ -31,6 +31,9 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         {
             TelaAluguelForm telaAluguel = new TelaAluguelForm();
 
+            telaAluguel.clienteLista = RepositorioCliente.SelecionarTodos();
+            telaAluguel.temaLista = RepositorioTema.SelecionarTodos();
+
             DialogResult resultado = telaAluguel.ShowDialog();
 
             if (resultado != DialogResult.OK)

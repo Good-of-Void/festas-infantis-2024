@@ -29,28 +29,26 @@
         private void InitializeComponent()
         {
             label2 = new Label();
-            cboxNome = new ComboBox();
             label1 = new Label();
-            cboxTema = new ComboBox();
             label3 = new Label();
-            cboxSinal = new ComboBox();
-            gboxDadosPagamento = new GroupBox();
+            cboxEntrada = new ComboBox();
+            cboxTema = new ComboBox();
+            cboxCliente = new ComboBox();
+            label4 = new Label();
             btnCalcular = new Button();
-            cboxValorSinal = new ComboBox();
+            gboxDadosPagamento = new GroupBox();
+            txtValorTotal = new TextBox();
+            txtPedente = new TextBox();
+            label9 = new Label();
+            txtValorEntrada = new TextBox();
+            txtTemaDesconto = new TextBox();
+            txtValorTema = new TextBox();
+            txtDesconto = new TextBox();
             label6 = new Label();
-            cboxValorPendente = new ComboBox();
-            cboxValorTema = new ComboBox();
             label8 = new Label();
             label5 = new Label();
-            cboxValorComDesconto = new ComboBox();
             label7 = new Label();
-            cboxPorcentagemDesconto = new ComboBox();
-            label4 = new Label();
-            panel1 = new Panel();
-            btnGravar = new Button();
-            btnCancelar = new Button();
             gboxDadosPagamento.SuspendLayout();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label2
@@ -59,21 +57,11 @@
             label2.BackColor = Color.FromArgb(219, 226, 239);
             label2.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(63, 114, 175);
-            label2.Location = new Point(16, 33);
+            label2.Location = new Point(17, 44);
             label2.Name = "label2";
-            label2.Size = new Size(72, 23);
+            label2.Size = new Size(101, 28);
             label2.TabIndex = 2;
-            label2.Text = "Nome";
-            // 
-            // cboxNome
-            // 
-            cboxNome.BackColor = Color.FromArgb(249, 247, 247);
-            cboxNome.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cboxNome.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxNome.Location = new Point(94, 30);
-            cboxNome.Name = "cboxNome";
-            cboxNome.Size = new Size(121, 31);
-            cboxNome.TabIndex = 3;
+            label2.Text = "Cliente";
             // 
             // label1
             // 
@@ -81,21 +69,11 @@
             label1.BackColor = Color.FromArgb(219, 226, 239);
             label1.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(63, 114, 175);
-            label1.Location = new Point(252, 32);
+            label1.Location = new Point(436, 44);
             label1.Name = "label1";
-            label1.Size = new Size(69, 23);
+            label1.Size = new Size(82, 28);
             label1.TabIndex = 2;
             label1.Text = "Tema";
-            // 
-            // cboxTema
-            // 
-            cboxTema.BackColor = Color.FromArgb(249, 247, 247);
-            cboxTema.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cboxTema.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxTema.Location = new Point(327, 29);
-            cboxTema.Name = "cboxTema";
-            cboxTema.Size = new Size(121, 31);
-            cboxTema.TabIndex = 3;
             // 
             // label3
             // 
@@ -103,239 +81,265 @@
             label3.BackColor = Color.FromArgb(219, 226, 239);
             label3.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(63, 114, 175);
-            label3.Location = new Point(484, 33);
+            label3.Location = new Point(17, 112);
             label3.Name = "label3";
-            label3.Size = new Size(65, 23);
+            label3.Size = new Size(186, 28);
             label3.TabIndex = 2;
-            label3.Text = "Sinal";
+            label3.Text = "% da entrada";
             // 
-            // cboxSinal
+            // cboxEntrada
             // 
-            cboxSinal.BackColor = Color.FromArgb(249, 247, 247);
-            cboxSinal.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cboxSinal.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxSinal.Location = new Point(559, 29);
-            cboxSinal.Name = "cboxSinal";
-            cboxSinal.Size = new Size(121, 31);
-            cboxSinal.TabIndex = 3;
+            cboxEntrada.BackColor = Color.FromArgb(249, 247, 247);
+            cboxEntrada.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboxEntrada.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxEntrada.Items.AddRange(new object[] { "00", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100" });
+            cboxEntrada.Location = new Point(209, 108);
+            cboxEntrada.Margin = new Padding(3, 4, 3, 4);
+            cboxEntrada.Name = "cboxEntrada";
+            cboxEntrada.Size = new Size(104, 37);
+            cboxEntrada.TabIndex = 2;
             // 
-            // gboxDadosPagamento
+            // cboxTema
             // 
-            gboxDadosPagamento.BackColor = Color.FromArgb(219, 226, 239);
-            gboxDadosPagamento.Controls.Add(btnCalcular);
-            gboxDadosPagamento.Controls.Add(cboxValorSinal);
-            gboxDadosPagamento.Controls.Add(label6);
-            gboxDadosPagamento.Controls.Add(cboxValorPendente);
-            gboxDadosPagamento.Controls.Add(cboxValorTema);
-            gboxDadosPagamento.Controls.Add(label8);
-            gboxDadosPagamento.Controls.Add(label5);
-            gboxDadosPagamento.Controls.Add(cboxValorComDesconto);
-            gboxDadosPagamento.Controls.Add(label7);
-            gboxDadosPagamento.Controls.Add(cboxPorcentagemDesconto);
-            gboxDadosPagamento.Controls.Add(label4);
-            gboxDadosPagamento.Location = new Point(40, 116);
-            gboxDadosPagamento.Name = "gboxDadosPagamento";
-            gboxDadosPagamento.Size = new Size(683, 314);
-            gboxDadosPagamento.TabIndex = 4;
-            gboxDadosPagamento.TabStop = false;
-            gboxDadosPagamento.Text = "Dados Pagamento";
+            cboxTema.BackColor = Color.FromArgb(249, 247, 247);
+            cboxTema.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboxTema.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxTema.Location = new Point(524, 40);
+            cboxTema.Margin = new Padding(3, 4, 3, 4);
+            cboxTema.Name = "cboxTema";
+            cboxTema.Size = new Size(225, 37);
+            cboxTema.TabIndex = 1;
             // 
-            // btnCalcular
+            // cboxCliente
             // 
-            btnCalcular.Location = new Point(23, 42);
-            btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(115, 46);
-            btnCalcular.TabIndex = 4;
-            btnCalcular.Text = "Calcular";
-            btnCalcular.UseVisualStyleBackColor = true;
-            // 
-            // cboxValorSinal
-            // 
-            cboxValorSinal.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorSinal.Font = new Font("Verdana", 14.25F);
-            cboxValorSinal.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorSinal.Location = new Point(426, 152);
-            cboxValorSinal.Name = "cboxValorSinal";
-            cboxValorSinal.Size = new Size(121, 31);
-            cboxValorSinal.TabIndex = 3;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Verdana", 14.25F, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(63, 114, 175);
-            label6.Location = new Point(194, 152);
-            label6.Name = "label6";
-            label6.Size = new Size(170, 23);
-            label6.TabIndex = 2;
-            label6.Text = "Valor do Sinal:";
-            // 
-            // cboxValorPendente
-            // 
-            cboxValorPendente.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorPendente.Font = new Font("Verdana", 14.25F);
-            cboxValorPendente.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorPendente.Location = new Point(426, 270);
-            cboxValorPendente.Name = "cboxValorPendente";
-            cboxValorPendente.Size = new Size(121, 31);
-            cboxValorPendente.TabIndex = 3;
-            cboxValorPendente.SelectedIndexChanged += comboBox5_SelectedIndexChanged;
-            // 
-            // cboxValorTema
-            // 
-            cboxValorTema.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorTema.Font = new Font("Verdana", 14.25F);
-            cboxValorTema.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorTema.Location = new Point(426, 93);
-            cboxValorTema.Name = "cboxValorTema";
-            cboxValorTema.Size = new Size(121, 31);
-            cboxValorTema.TabIndex = 3;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Verdana", 14.25F, FontStyle.Bold);
-            label8.ForeColor = Color.FromArgb(63, 114, 175);
-            label8.Location = new Point(194, 270);
-            label8.Name = "label8";
-            label8.Size = new Size(185, 23);
-            label8.TabIndex = 2;
-            label8.Text = "Valor Pendente:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Verdana", 14.25F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(63, 114, 175);
-            label5.Location = new Point(194, 93);
-            label5.Name = "label5";
-            label5.Size = new Size(170, 23);
-            label5.TabIndex = 2;
-            label5.Text = "Valor do tema:";
-            // 
-            // cboxValorComDesconto
-            // 
-            cboxValorComDesconto.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorComDesconto.Font = new Font("Verdana", 14.25F);
-            cboxValorComDesconto.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorComDesconto.Location = new Point(426, 209);
-            cboxValorComDesconto.Name = "cboxValorComDesconto";
-            cboxValorComDesconto.Size = new Size(121, 31);
-            cboxValorComDesconto.TabIndex = 3;
-            cboxValorComDesconto.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Verdana", 14.25F, FontStyle.Bold);
-            label7.ForeColor = Color.FromArgb(63, 114, 175);
-            label7.Location = new Point(194, 212);
-            label7.Name = "label7";
-            label7.Size = new Size(233, 23);
-            label7.TabIndex = 2;
-            label7.Text = "Valor com Desconto:";
-            // 
-            // cboxPorcentagemDesconto
-            // 
-            cboxPorcentagemDesconto.BackColor = Color.FromArgb(249, 247, 247);
-            cboxPorcentagemDesconto.Font = new Font("Verdana", 14.25F);
-            cboxPorcentagemDesconto.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxPorcentagemDesconto.Location = new Point(426, 34);
-            cboxPorcentagemDesconto.Name = "cboxPorcentagemDesconto";
-            cboxPorcentagemDesconto.Size = new Size(121, 31);
-            cboxPorcentagemDesconto.TabIndex = 3;
+            cboxCliente.BackColor = Color.FromArgb(249, 247, 247);
+            cboxCliente.Font = new Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboxCliente.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxCliente.Location = new Point(124, 40);
+            cboxCliente.Margin = new Padding(3, 4, 3, 4);
+            cboxCliente.Name = "cboxCliente";
+            cboxCliente.Size = new Size(294, 37);
+            cboxCliente.TabIndex = 0;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 14.25F, FontStyle.Bold);
+            label4.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(63, 114, 175);
-            label4.Location = new Point(194, 42);
+            label4.Location = new Point(44, 49);
             label4.Name = "label4";
-            label4.Size = new Size(185, 23);
+            label4.Size = new Size(211, 28);
             label4.TabIndex = 2;
-            label4.Text = "% De Desconto:";
+            label4.Text = "% De Desconto";
             // 
-            // panel1
+            // btnCalcular
             // 
-            panel1.BackColor = Color.FromArgb(219, 226, 239);
-            panel1.Controls.Add(btnGravar);
-            panel1.Controls.Add(btnCancelar);
-            panel1.Controls.Add(cboxNome);
-            panel1.Controls.Add(cboxSinal);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(cboxTema);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(21, 18);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(729, 479);
-            panel1.TabIndex = 5;
+            btnCalcular.BackgroundImageLayout = ImageLayout.None;
+            btnCalcular.FlatAppearance.BorderSize = 0;
+            btnCalcular.Font = new Font("Verdana", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCalcular.ForeColor = Color.FromArgb(63, 114, 175);
+            btnCalcular.Image = Properties.Resources.cifrao;
+            btnCalcular.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCalcular.Location = new Point(542, 104);
+            btnCalcular.Margin = new Padding(5);
+            btnCalcular.Name = "btnCalcular";
+            btnCalcular.Size = new Size(176, 56);
+            btnCalcular.TabIndex = 3;
+            btnCalcular.Text = "   Calcular";
+            btnCalcular.TextAlign = ContentAlignment.MiddleLeft;
+            btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click;
             // 
-            // btnGravar
+            // gboxDadosPagamento
             // 
-            btnGravar.BackColor = Color.FromArgb(249, 247, 247);
-            btnGravar.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGravar.ForeColor = Color.FromArgb(63, 114, 175);
-            btnGravar.Location = new Point(450, 417);
-            btnGravar.Margin = new Padding(3, 2, 3, 2);
-            btnGravar.Name = "btnGravar";
-            btnGravar.Size = new Size(118, 41);
-            btnGravar.TabIndex = 11;
-            btnGravar.Text = "Gravar";
-            btnGravar.UseVisualStyleBackColor = false;
+            gboxDadosPagamento.BackColor = Color.FromArgb(219, 226, 239);
+            gboxDadosPagamento.Controls.Add(txtValorTotal);
+            gboxDadosPagamento.Controls.Add(txtPedente);
+            gboxDadosPagamento.Controls.Add(label9);
+            gboxDadosPagamento.Controls.Add(txtValorEntrada);
+            gboxDadosPagamento.Controls.Add(txtTemaDesconto);
+            gboxDadosPagamento.Controls.Add(txtValorTema);
+            gboxDadosPagamento.Controls.Add(txtDesconto);
+            gboxDadosPagamento.Controls.Add(label6);
+            gboxDadosPagamento.Controls.Add(label8);
+            gboxDadosPagamento.Controls.Add(label5);
+            gboxDadosPagamento.Controls.Add(label7);
+            gboxDadosPagamento.Controls.Add(label4);
+            gboxDadosPagamento.Font = new Font("Verdana", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            gboxDadosPagamento.ForeColor = Color.FromArgb(63, 114, 175);
+            gboxDadosPagamento.Location = new Point(19, 195);
+            gboxDadosPagamento.Margin = new Padding(3, 4, 3, 4);
+            gboxDadosPagamento.Name = "gboxDadosPagamento";
+            gboxDadosPagamento.Padding = new Padding(3, 4, 3, 4);
+            gboxDadosPagamento.Size = new Size(732, 306);
+            gboxDadosPagamento.TabIndex = 4;
+            gboxDadosPagamento.TabStop = false;
+            gboxDadosPagamento.Text = "Dados Pagamento";
             // 
-            // btnCancelar
+            // txtValorTotal
             // 
-            btnCancelar.BackColor = Color.FromArgb(249, 247, 247);
-            btnCancelar.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = Color.FromArgb(63, 114, 175);
-            btnCancelar.Location = new Point(584, 417);
-            btnCancelar.Margin = new Padding(3, 2, 3, 2);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(118, 41);
-            btnCancelar.TabIndex = 12;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
+            txtValorTotal.BackColor = Color.FromArgb(249, 247, 247);
+            txtValorTotal.Enabled = false;
+            txtValorTotal.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtValorTotal.ForeColor = Color.FromArgb(63, 114, 175);
+            txtValorTotal.Location = new Point(178, 252);
+            txtValorTotal.Name = "txtValorTotal";
+            txtValorTotal.Size = new Size(166, 35);
+            txtValorTotal.TabIndex = 10;
+            // 
+            // txtPedente
+            // 
+            txtPedente.BackColor = Color.FromArgb(249, 247, 247);
+            txtPedente.Enabled = false;
+            txtPedente.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPedente.ForeColor = Color.FromArgb(63, 114, 175);
+            txtPedente.Location = new Point(574, 184);
+            txtPedente.Name = "txtPedente";
+            txtPedente.Size = new Size(140, 35);
+            txtPedente.TabIndex = 9;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(63, 114, 175);
+            label9.Location = new Point(374, 187);
+            label9.Name = "label9";
+            label9.Size = new Size(191, 28);
+            label9.TabIndex = 8;
+            label9.Text = "Valor pedente";
+            // 
+            // txtValorEntrada
+            // 
+            txtValorEntrada.BackColor = Color.FromArgb(249, 247, 247);
+            txtValorEntrada.Enabled = false;
+            txtValorEntrada.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtValorEntrada.ForeColor = Color.FromArgb(63, 114, 175);
+            txtValorEntrada.Location = new Point(178, 184);
+            txtValorEntrada.Name = "txtValorEntrada";
+            txtValorEntrada.Size = new Size(169, 35);
+            txtValorEntrada.TabIndex = 7;
+            // 
+            // txtTemaDesconto
+            // 
+            txtTemaDesconto.BackColor = Color.FromArgb(249, 247, 247);
+            txtTemaDesconto.Enabled = false;
+            txtTemaDesconto.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTemaDesconto.ForeColor = Color.FromArgb(63, 114, 175);
+            txtTemaDesconto.Location = new Point(574, 114);
+            txtTemaDesconto.Name = "txtTemaDesconto";
+            txtTemaDesconto.Size = new Size(140, 35);
+            txtTemaDesconto.TabIndex = 6;
+            // 
+            // txtValorTema
+            // 
+            txtValorTema.BackColor = Color.FromArgb(249, 247, 247);
+            txtValorTema.Enabled = false;
+            txtValorTema.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtValorTema.ForeColor = Color.FromArgb(63, 114, 175);
+            txtValorTema.Location = new Point(178, 114);
+            txtValorTema.Name = "txtValorTema";
+            txtValorTema.Size = new Size(169, 35);
+            txtValorTema.TabIndex = 5;
+            // 
+            // txtDesconto
+            // 
+            txtDesconto.BackColor = Color.FromArgb(249, 247, 247);
+            txtDesconto.Enabled = false;
+            txtDesconto.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDesconto.ForeColor = Color.FromArgb(63, 114, 175);
+            txtDesconto.Location = new Point(261, 49);
+            txtDesconto.Name = "txtDesconto";
+            txtDesconto.Size = new Size(86, 35);
+            txtDesconto.TabIndex = 4;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(63, 114, 175);
+            label6.Location = new Point(16, 255);
+            label6.Name = "label6";
+            label6.Size = new Size(147, 28);
+            label6.TabIndex = 2;
+            label6.Text = "Valor total";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(63, 114, 175);
+            label8.Location = new Point(44, 172);
+            label8.Name = "label8";
+            label8.Size = new Size(119, 56);
+            label8.TabIndex = 2;
+            label8.Text = "Valor da\r\nentrada";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(63, 114, 175);
+            label5.Location = new Point(44, 103);
+            label5.Name = "label5";
+            label5.Size = new Size(128, 56);
+            label5.TabIndex = 2;
+            label5.Text = "Valor do \r\ntema";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Verdana", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(63, 114, 175);
+            label7.Location = new Point(374, 103);
+            label7.Name = "label7";
+            label7.Size = new Size(194, 56);
+            label7.TabIndex = 2;
+            label7.Text = "Valor tema \r\ncom Desconto";
             // 
             // TelaAluguelControl
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(63, 114, 175);
+            BackColor = Color.FromArgb(219, 226, 239);
             Controls.Add(gboxDadosPagamento);
-            Controls.Add(panel1);
+            Controls.Add(label1);
+            Controls.Add(btnCalcular);
+            Controls.Add(cboxCliente);
+            Controls.Add(cboxTema);
+            Controls.Add(cboxEntrada);
+            Controls.Add(label2);
+            Controls.Add(label3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "TelaAluguelControl";
             Size = new Size(769, 514);
             gboxDadosPagamento.ResumeLayout(false);
             gboxDadosPagamento.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label2;
-        private ComboBox cboxNome;
         private Label label1;
-        private ComboBox cboxTema;
         private Label label3;
-        private ComboBox cboxSinal;
-        private GroupBox gboxDadosPagamento;
-        private ComboBox cboxPorcentagemDesconto;
+        private ComboBox cboxEntrada;
+        private ComboBox cboxTema;
+        private ComboBox cboxCliente;
         private Label label4;
         private Button btnCalcular;
-        private ComboBox cboxValorSinal;
+        private GroupBox gboxDadosPagamento;
         private Label label6;
-        private ComboBox cboxValorPendente;
-        private ComboBox cboxValorTema;
         private Label label8;
-        private Label label5;
-        private ComboBox cboxValorComDesconto;
         private Label label7;
-        private Panel panel1;
-        private Button btnGravar;
-        private Button btnCancelar;
+        private TextBox txtDesconto;
+        private TextBox txtTemaDesconto;
+        private TextBox txtValorEntrada;
+        private TextBox txtValorTotal;
+        private TextBox txtPedente;
+        private Label label9;
+        private TextBox txtValorTema;
+        private Label label5;
     }
 }
