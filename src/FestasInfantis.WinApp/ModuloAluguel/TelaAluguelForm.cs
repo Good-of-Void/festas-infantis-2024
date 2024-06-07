@@ -9,7 +9,6 @@ namespace FestasInfantis.WinApp.ModuloAluguel
     public partial class TelaAluguelForm : Form
     {
         private Aluguel aluguel;
-        private Aluguel parteAluguel;
         private Festa festa;
         private TelaFestaControl telaFesta;
         private TelaAluguelControl telaAluguelCon;
@@ -54,7 +53,19 @@ namespace FestasInfantis.WinApp.ModuloAluguel
                 ProximaTela();
                 return;
             }
-            this.parteAluguel = telaAluguelCon.Aluguel;
+            this.aluguel = telaAluguelCon.Aluguel;
+            this.aluguel.Festa = this.festa;
+
+            //valida os dados coletados
+            List<string> erros = aluguel.Validar();
+
+            if (erros.Count > 0)
+            {
+                TelaPrincipalForm.Instancia.AtualizarRodape(erros[0]);
+
+                DialogResult = DialogResult.None;
+            }
+            DialogResult = DialogResult.OK;
 
         }
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             aluguel.Cliente = (Cliente)this.cboxCliente.SelectedItem;
             aluguel.Tema = (Tema)this.cboxTema.SelectedItem;
             aluguel.ValorEntrada = Convert.ToDecimal(this.txtValorEntrada.Text);
-            aluguel.ValorEntrada = Convert.ToDecimal(this.txtValorEntrada.Text);
+            aluguel.ValorTotal = Convert.ToDecimal(this.txtValorEntrada.Text);
         }
 
         
@@ -70,7 +70,48 @@ namespace FestasInfantis.WinApp.ModuloAluguel
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Console.WriteLine();
+            Calcular();
+        }
+
+        private void Calcular()
+        {
+            Cliente cliente = (Cliente)this.cboxCliente.SelectedItem;
+            Tema tema = (Tema)this.cboxTema.SelectedItem;
+            decimal entrada = Convert.ToDecimal(this.cboxEntrada.SelectedItem);
+            entrada = entrada / 100;
+            decimal total;
+
+            //txtValorTema
+            this.txtValorTema.Text = tema.Valor.ToString();
+            total = tema.Valor;
+        
+            //txtDesconto
+            decimal descontoCliente = cliente.QuantidadeAlugueis;
+            if (descontoCliente >= 5)
+            {
+                descontoCliente = (5 * 5) / 100;
+                this.txtDesconto.Text = Convert.ToString(descontoCliente * 100);
+            }
+            else
+            {
+                descontoCliente = (descontoCliente * 5) / 100;
+                this.txtDesconto.Text = Convert.ToString(descontoCliente * 100);
+            }
+            total = total - (total * descontoCliente);
+
+            //txtTemaDesconto 
+            this.txtTemaDesconto.Text = total.ToString();
+
+            //txtValorEntrada
+            entrada = total * entrada;
+            this.txtValorEntrada.Text = entrada.ToString();
+
+            //txtValorTotal
+            this.txtValorTotal.Text = total.ToString();
+
+            //txtPedente
+            total -= entrada;
+            this.txtPedente.Text = total.ToString();
         }
     }
 }

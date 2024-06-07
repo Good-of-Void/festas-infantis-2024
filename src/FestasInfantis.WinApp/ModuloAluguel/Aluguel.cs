@@ -13,7 +13,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         public Festa Festa { get; set; }
         public Tema Tema { get; set; }
         public decimal ValorEntrada { get; set; }
-        public decimal ValorDesconto { get; set; }
+        public decimal ValorTotal { get; set; }
         public DateTime? DataPagamento { get; set; }
         public bool PagamentoConcluido { get; set; }
 
@@ -23,13 +23,13 @@ namespace FestasInfantis.WinApp.ModuloAluguel
         }
 
         //Construtor
-        public Aluguel(Cliente cliente, Festa festa, Tema tema, decimal valorentrada, decimal valordesconto)
+        public Aluguel(Cliente cliente, Festa festa, Tema tema, decimal valorentrada, decimal valorTotal)
         {
             Cliente = cliente;
             Festa = festa;
             Tema = tema;
             ValorEntrada = valorentrada;
-            ValorDesconto = valordesconto;
+            ValorTotal = valorTotal;
             PagamentoConcluido = false;
             DataPagamento = null;
         }
@@ -62,7 +62,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
             this.Cliente = novo.Cliente;
             this.Festa = novo.Festa;
             this.Tema = novo.Tema;
-            this.ValorDesconto = novo.ValorDesconto;
+            this.ValorTotal = novo.ValorTotal;
             this.ValorEntrada = novo.ValorEntrada;
             this.DataPagamento = novo.DataPagamento;
             this.PagamentoConcluido = novo.PagamentoConcluido;
