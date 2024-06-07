@@ -1,4 +1,5 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloItem;
 
 namespace FestasInfantis.WinApp.ModuloTema
 {
@@ -6,11 +7,12 @@ namespace FestasInfantis.WinApp.ModuloTema
     {
         public RepositorioTemaEmArquivo(ContextoDados contexto) : base(contexto)
         {
-            
+          
         }
         protected override List<Tema> ObterRegistros()
         {
             return contexto.Temas;
         }
+     
     }
 }

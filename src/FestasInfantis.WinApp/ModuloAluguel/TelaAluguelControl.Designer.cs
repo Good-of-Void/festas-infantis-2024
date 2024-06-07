@@ -36,19 +36,19 @@
             cboxSinal = new ComboBox();
             gboxDadosPagamento = new GroupBox();
             btnCalcular = new Button();
-            cboxValorSinal = new ComboBox();
             label6 = new Label();
-            cboxValorPendente = new ComboBox();
-            cboxValorTema = new ComboBox();
             label8 = new Label();
             label5 = new Label();
-            cboxValorComDesconto = new ComboBox();
             label7 = new Label();
-            cboxPorcentagemDesconto = new ComboBox();
             label4 = new Label();
             panel1 = new Panel();
             btnGravar = new Button();
             btnCancelar = new Button();
+            cboxValorPendente = new ComboBox();
+            cboxValorComDesconto = new ComboBox();
+            cboxValorSinal = new ComboBox();
+            cboxValorTema = new ComboBox();
+            cboxPorcentagemDesconto = new ComboBox();
             gboxDadosPagamento.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -149,16 +149,6 @@
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
             // 
-            // cboxValorSinal
-            // 
-            cboxValorSinal.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorSinal.Font = new Font("Verdana", 14.25F);
-            cboxValorSinal.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorSinal.Location = new Point(426, 152);
-            cboxValorSinal.Name = "cboxValorSinal";
-            cboxValorSinal.Size = new Size(121, 31);
-            cboxValorSinal.TabIndex = 3;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -169,27 +159,6 @@
             label6.Size = new Size(170, 23);
             label6.TabIndex = 2;
             label6.Text = "Valor do Sinal:";
-            // 
-            // cboxValorPendente
-            // 
-            cboxValorPendente.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorPendente.Font = new Font("Verdana", 14.25F);
-            cboxValorPendente.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorPendente.Location = new Point(426, 270);
-            cboxValorPendente.Name = "cboxValorPendente";
-            cboxValorPendente.Size = new Size(121, 31);
-            cboxValorPendente.TabIndex = 3;
-            cboxValorPendente.SelectedIndexChanged += comboBox5_SelectedIndexChanged;
-            // 
-            // cboxValorTema
-            // 
-            cboxValorTema.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorTema.Font = new Font("Verdana", 14.25F);
-            cboxValorTema.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorTema.Location = new Point(426, 93);
-            cboxValorTema.Name = "cboxValorTema";
-            cboxValorTema.Size = new Size(121, 31);
-            cboxValorTema.TabIndex = 3;
             // 
             // label8
             // 
@@ -213,17 +182,6 @@
             label5.TabIndex = 2;
             label5.Text = "Valor do tema:";
             // 
-            // cboxValorComDesconto
-            // 
-            cboxValorComDesconto.BackColor = Color.FromArgb(249, 247, 247);
-            cboxValorComDesconto.Font = new Font("Verdana", 14.25F);
-            cboxValorComDesconto.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxValorComDesconto.Location = new Point(426, 209);
-            cboxValorComDesconto.Name = "cboxValorComDesconto";
-            cboxValorComDesconto.Size = new Size(121, 31);
-            cboxValorComDesconto.TabIndex = 3;
-            cboxValorComDesconto.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -234,16 +192,6 @@
             label7.Size = new Size(233, 23);
             label7.TabIndex = 2;
             label7.Text = "Valor com Desconto:";
-            // 
-            // cboxPorcentagemDesconto
-            // 
-            cboxPorcentagemDesconto.BackColor = Color.FromArgb(249, 247, 247);
-            cboxPorcentagemDesconto.Font = new Font("Verdana", 14.25F);
-            cboxPorcentagemDesconto.ForeColor = Color.FromArgb(63, 114, 175);
-            cboxPorcentagemDesconto.Location = new Point(426, 34);
-            cboxPorcentagemDesconto.Name = "cboxPorcentagemDesconto";
-            cboxPorcentagemDesconto.Size = new Size(121, 31);
-            cboxPorcentagemDesconto.TabIndex = 3;
             // 
             // label4
             // 
@@ -298,6 +246,58 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // cboxValorPendente
+            // 
+            cboxValorPendente.BackColor = Color.FromArgb(249, 247, 247);
+            cboxValorPendente.Font = new Font("Verdana", 14.25F);
+            cboxValorPendente.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxValorPendente.Location = new Point(426, 270);
+            cboxValorPendente.Name = "cboxValorPendente";
+            cboxValorPendente.Size = new Size(121, 31);
+            cboxValorPendente.TabIndex = 3;
+            cboxValorPendente.SelectedIndexChanged += comboBox5_SelectedIndexChanged;
+            // 
+            // cboxValorComDesconto
+            // 
+            cboxValorComDesconto.BackColor = Color.FromArgb(249, 247, 247);
+            cboxValorComDesconto.Font = new Font("Verdana", 14.25F);
+            cboxValorComDesconto.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxValorComDesconto.Location = new Point(426, 209);
+            cboxValorComDesconto.Name = "cboxValorComDesconto";
+            cboxValorComDesconto.Size = new Size(121, 31);
+            cboxValorComDesconto.TabIndex = 3;
+            cboxValorComDesconto.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
+            // 
+            // cboxValorSinal
+            // 
+            cboxValorSinal.BackColor = Color.FromArgb(249, 247, 247);
+            cboxValorSinal.Font = new Font("Verdana", 14.25F);
+            cboxValorSinal.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxValorSinal.Location = new Point(426, 152);
+            cboxValorSinal.Name = "cboxValorSinal";
+            cboxValorSinal.Size = new Size(121, 31);
+            cboxValorSinal.TabIndex = 3;
+            // 
+            // cboxValorTema
+            // 
+            cboxValorTema.BackColor = Color.FromArgb(249, 247, 247);
+            cboxValorTema.Font = new Font("Verdana", 14.25F);
+            cboxValorTema.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxValorTema.Location = new Point(426, 93);
+            cboxValorTema.Name = "cboxValorTema";
+            cboxValorTema.Size = new Size(121, 31);
+            cboxValorTema.TabIndex = 3;
+            // 
+            // cboxPorcentagemDesconto
+            // 
+            cboxPorcentagemDesconto.BackColor = Color.FromArgb(249, 247, 247);
+            cboxPorcentagemDesconto.Font = new Font("Verdana", 14.25F);
+            cboxPorcentagemDesconto.ForeColor = Color.FromArgb(63, 114, 175);
+            cboxPorcentagemDesconto.Location = new Point(426, 34);
+            cboxPorcentagemDesconto.Name = "cboxPorcentagemDesconto";
+            cboxPorcentagemDesconto.Size = new Size(121, 31);
+            cboxPorcentagemDesconto.TabIndex = 3;
+            // 
             // TelaAluguelControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -323,19 +323,19 @@
         private Label label3;
         private ComboBox cboxSinal;
         private GroupBox gboxDadosPagamento;
-        private ComboBox cboxPorcentagemDesconto;
         private Label label4;
         private Button btnCalcular;
-        private ComboBox cboxValorSinal;
         private Label label6;
-        private ComboBox cboxValorPendente;
-        private ComboBox cboxValorTema;
         private Label label8;
         private Label label5;
-        private ComboBox cboxValorComDesconto;
         private Label label7;
         private Panel panel1;
         private Button btnGravar;
         private Button btnCancelar;
+        private ComboBox cboxValorSinal;
+        private ComboBox cboxValorPendente;
+        private ComboBox cboxValorTema;
+        private ComboBox cboxValorComDesconto;
+        private ComboBox cboxPorcentagemDesconto;
     }
 }

@@ -11,11 +11,12 @@ namespace FestasInfantis.WinApp.ModuloCliente
     {
         public RepositorioClienteEmArquivo(ContextoDados contexto) : base(contexto)
         {
-
+          
         }
         protected override List<Cliente> ObterRegistros()
         {
             return contexto.Clientes;
         }
+        
     }
 }

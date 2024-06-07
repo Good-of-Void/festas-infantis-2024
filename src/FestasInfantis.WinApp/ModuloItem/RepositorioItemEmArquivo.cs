@@ -1,4 +1,6 @@
 ﻿using FestasInfantis.WinApp.Compartilhado;
+using FestasInfantis.WinApp.ModuloCliente;
+using FestasInfantis.WinApp.ModuloTema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +13,12 @@ namespace FestasInfantis.WinApp.ModuloItem
     {
         public RepositorioItemEmArquivo(ContextoDados contexto) : base(contexto)
         {
-
+           
         }
         protected override List<Item> ObterRegistros()
         {
             return contexto.Itens;
         }
+        
     }
 }

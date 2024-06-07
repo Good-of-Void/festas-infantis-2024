@@ -6,7 +6,7 @@ namespace FestasInfantis.WinApp.ModuloAluguel
     {
         public RepositorioAluguelEmArquivo(ContextoDados contexto) : base(contexto)
         {
-
+           
         }
         protected override List<Aluguel> ObterRegistros()
         {
